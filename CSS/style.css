@@ -1,0 +1,259 @@
+body {
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+/* Global*/
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+#products .container, #portfolio .container, #about .container{
+	border-radius: 15px;
+	box-shadow:  #006700 5px 5px 4px 4px;
+	margin-top: 15px;
+	padding: 20px;
+	background-color: #ffffff;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+section{
+	margin: 0;
+}
+
+/*Header */
+header {
+	background: #008700;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: gold 3px solid;
+}
+
+header a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding-logo{
+	float: left;
+}
+
+header #branding-logo h1{
+	margin: 0;
+}
+
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+
+header .highlight, .current a{
+	color: gold;
+	font-weight: bold;
+}
+
+header a:hover{
+	color: gold;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+
+/*Phone number to call*/
+#call {
+	margin: auto;
+	width: 100%;
+	min-height: 70px;
+	text-align: center;
+	color: #FFD700;
+	text-shadow: 2px 2px 8px #111111;
+	font-size: 30px;
+	background-color: #f4f4f4;
+}
+
+/*Showcase*/
+#showcase{
+	min-height: 400px;
+	background: url('../img/scepter_showcase.jpg') 0 -50px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 2px 2px 8px #111111;
+	font-weight: bold;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#showcase h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+	
+}
+
+#showcase p{
+	font-size: 25px;
+	color: #111111;
+	text-shadow: 2px 2px 8px #ffffff;
+}
+
+/*Portfolio*/
+#portfolio{
+	margin-top: 20px;
+}
+
+#portfolio .main-column h1{
+	text-align: center;
+	font-weight: bold;
+}
+
+#portfolio .clients{
+	display: inline;
+	margin: 20px;
+	float: left;
+	width: 30%;
+	padding: 10px 40px 10px 10px;
+	text-align: center;
+}
+
+#portfolio .clients p{
+	height: 110px;
+	background-color: #f4f4f4;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+#portfolio .clients img{
+	width: 300px;
+	height: 250px;
+	border-radius: 10% 0 20% 0;
+}
+
+
+/*Contact us*/
+#contact-us{
+	min-height: 400px;
+}
+
+/*Article*/
+#products .container article {
+	width: 65%;
+	display: inline;
+	float: left;
+}
+
+/*Sidebar*/
+#products .container aside {
+	display: inline-flex;
+	width: 30%;
+	float: right;
+	background-color: #f4f4f4;
+	border-radius: 10px;
+	min-height: 400px;
+	width: fit-content;
+}
+
+#products .container aside h1{
+	padding: 20px 20px;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 40px;
+	color: #111111;
+	text-align: center;
+}
+
+/*Footer*/
+#footer{
+	padding: 20px;
+	margin-top: 20px;
+	min-height: 250px;
+	background-color: #4f4f4f;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* Difference width devices */
+@media(max-width: 768px){
+	branding-logo, 			/*header: branding logo; */
+	header .top-nav, 			/*header: nav; */
+	header .top-nav li,
+	section,
+	section h1,
+	section#call h1,
+	section.clients,
+	#portfolio h1,
+	#portfolio .clients,
+	#portfolio .clients p,
+	#about img,
+	footer p {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	#portfolio .clients img {
+		border-radius: 15px;
+		width: 60%;
+		height: 60%;
+	}
+
+	#portfolio .clients p{
+		float: none;
+		text-align: center;
+		width: 100%;
+		border:none;
+		background-color: #ffffff;
+	}
+	#products .container aside {
+		display: inline-block;
+		float: none;
+		text-align: center;
+		min-height: 150px;
+		width: 100%;
+	}
+
+	#products .container aside h1{
+
+		display: inline;
+		font-size: 28px;
+		text-align: center;
+		margin: 20px 20px;
+	}
+
+	section {
+		border-radius: none;
+		box-shadow: gold;
+	}
+
+	header {
+		padding-bottom: 18px;
+	}
+
+	#showcase{
+		background-size: cover;
+	}
+
+	#showcase h1 {
+		margin-top: 20px;
+		font-size: 45px;
+	}
+	#showcase p{
+		margin-top: 0;
+		font-size: 25px;
+	}
+}
