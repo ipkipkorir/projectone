@@ -31,50 +31,52 @@ section{
 
 /*Header */
 header {
-	background: #008700;
-	color: #ffffff;
-	padding-top: 30px;
+	background: #006700;
+	color: #fff;
+	padding-top: 0;
 	min-height: 70px;
 	border-bottom: gold 3px solid;
 }
 
-header a{
-	color: #ffffff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 16px;
+header .container {
+	display: block;
 }
 
-header li{
+header .container nav {
 	float: left;
-	display: inline;
-	padding: 0 20px 0 20px;
+	width: 100%;
+	background: #006700;
 }
 
-header #branding-logo{
+header #branding-logo {
+	display: inline;
+	font-size: 20px;
+}
+
+header #branding-logo img {
+	width: 125px;
 	float: left;
 }
 
 header #branding-logo h1{
-	margin: 0;
+	margin: 0 auto;
+	padding: 0 20px;
+	float: left;
+	text-shadow: 2px 4px #111;
 }
 
-header nav{
+/*
+Search bar
+*/
+
+.topnav input[type=text] {
 	float: right;
-	margin-top: 10px;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
 }
-
-header .highlight, .current a{
-	color: gold;
-	font-weight: bold;
-}
-
-header a:hover{
-	color: gold;
-	font-weight: bold;
-	font-size: 18px;
-}
-
 
 /*Phone number to call*/
 #call {
@@ -90,7 +92,7 @@ header a:hover{
 
 /*Showcase*/
 #showcase{
-	min-height: 400px;
+	min-height: 380px;
 	background: url('../img/scepter_showcase.jpg') 0 -50px;
 	text-align: center;
 	color: #ffffff;
@@ -99,17 +101,32 @@ header a:hover{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+#showcase .container {
+	width: 100%;
+	/*height: calc(100vh - 150px);*/
+	margin: 0;
+	padding: 0;
+	background: rgb(0, 0, 0); 		/* Fallback color */
+  	background: rgba(0, 0, 0, 0.4); /* Black background with 0.4 opacity */
+  	background-size: cover;
+}
+
+#showcase .container p{
+	padding: 0 0 50px 0;
+}
+
 #showcase h1{
-	margin-top: 100px;
-	font-size: 55px;
+	margin-top: 75px;
+	font-size: 50px;
 	margin-bottom: 10px;
 	
 }
 
 #showcase p{
-	font-size: 25px;
-	color: #111111;
-	text-shadow: 2px 2px 8px #ffffff;
+	font-size: 28px;
+	color: #ffffff;
+	text-shadow: 2px 2px 8px #111;
 }
 
 /*Portfolio*/
@@ -128,7 +145,7 @@ header a:hover{
 	float: left;
 	width: 30%;
 	padding: 10px 40px 10px 10px;
-	text-align: center;
+	text-align: left;
 }
 
 #portfolio .clients p{
@@ -141,13 +158,16 @@ header a:hover{
 #portfolio .clients img{
 	width: 300px;
 	height: 250px;
-	border-radius: 10% 0 20% 0;
+	border-radius: 16px;
 }
 
 
 /*Contact us*/
 #contact-us{
+	margin-top: 15px;
+	width: 100%;
 	min-height: 400px;
+	background: lightgray;
 }
 
 /*Article*/
@@ -180,7 +200,7 @@ header a:hover{
 /*Footer*/
 #footer{
 	padding: 20px;
-	margin-top: 20px;
+	margin-top: 0px;
 	min-height: 250px;
 	background-color: #4f4f4f;
 	color: #ffffff;
@@ -189,9 +209,6 @@ header a:hover{
 
 /* Difference width devices */
 @media(max-width: 768px){
-	branding-logo, 			/*header: branding logo; */
-	header .top-nav, 			/*header: nav; */
-	header .top-nav li,
 	section,
 	section h1,
 	section#call h1,
@@ -199,41 +216,64 @@ header a:hover{
 	#portfolio h1,
 	#portfolio .clients,
 	#portfolio .clients p,
-	#about img,
 	footer p {
 		float: none;
 		text-align: center;
 		width: 100%;
 	}
 
+	header .container {
+		width: 100%;
+	}
+
+	header #branding-logo {
+		display: inline;
+		font-size: 12px;
+		width: 100%;
+	}
+	header #branding-logo img {
+		width: 90px;
+		float: left;
+	}
+	header #branding-logo h1 {
+		
+		float: right;
+	}
+
+	/*Under development*/
+	/*
+	.topnav input[type=text] {
+		width: 90%;
+		margin: 0 auto;
+		padding: 14px;
+		float: none;
+		display: block;
+		text-align: left;
+		border: 1px solid #ccc;
+	}
+	*/
+
 	#portfolio .clients img {
 		border-radius: 15px;
-		width: 60%;
-		height: 60%;
+		display: block;
+
 	}
 
-	#portfolio .clients p{
-		float: none;
-		text-align: center;
+	#products .container .main-column {
 		width: 100%;
-		border:none;
-		background-color: #ffffff;
 	}
+
+	.container .main-column p {
+		text-align: justify;
+	}
+
 	#products .container aside {
-		display: inline-block;
-		float: none;
-		text-align: center;
-		min-height: 150px;
+		display: none;
+	}
+	#about .main-column img {
 		width: 100%;
 	}
 
-	#products .container aside h1{
-
-		display: inline;
-		font-size: 28px;
-		text-align: center;
-		margin: 20px 20px;
-	}
 
 	section {
 		border-radius: none;
@@ -241,19 +281,56 @@ header a:hover{
 	}
 
 	header {
+		margin-top: 0 auto;
 		padding-bottom: 18px;
 	}
 
-	#showcase{
-		background-size: cover;
+	#showcase {
+	 	width: 100%;
+	 	background: url('../img/scepter_showcase.jpg');
+	  	background-position: center;
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+	}
+
+	#showcase .container {
+		width: 94%;
 	}
 
 	#showcase h1 {
 		margin-top: 20px;
-		font-size: 45px;
+		font-size: 35px;
 	}
 	#showcase p{
 		margin-top: 0;
-		font-size: 25px;
+		font-size: 20px;
+		line-height: 2.5;
+	}
+
+	#products aside .sidebar {
+		display: none;
+	}
+
+	#portfolio .main-column{
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	#portfolio .main-column img {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	#portfolio .main-column p {
+		text-align: justify;
+		padding: 2px 6px;
+		float: none;
+		width: 100%;
+		border: none;
+		background-color: #ffffff;
+	}
+
+	#footer {
+		min-height: 240px;
 	}
 }
