@@ -130,7 +130,7 @@ Search bar
 }
 
 /*Portfolio*/
-#portfolio{
+#portfolio {
 	margin-top: 20px;
 }
 
@@ -139,13 +139,15 @@ Search bar
 	font-weight: bold;
 }
 
-#portfolio .clients{
+#portfolio .clients {
 	display: inline;
 	margin: 20px;
 	float: left;
 	width: 30%;
 	padding: 10px 40px 10px 10px;
 	text-align: left;
+	box-shadow: #ccc 8px 4px 8px 4px;
+	border: #f4f4f4 solid;
 }
 
 #portfolio .clients p{
@@ -240,18 +242,15 @@ Search bar
 		float: right;
 	}
 
-	/*Under development*/
-	/*
-	.topnav input[type=text] {
-		width: 90%;
-		margin: 0 auto;
-		padding: 14px;
-		float: none;
+	#portfolio .clients {
 		display: block;
-		text-align: left;
-		border: 1px solid #ccc;
+		width: 85%;
+		margin: 20px auto;
 	}
-	*/
+
+	#portfolio .clients p {
+		padding: 6px;
+	}
 
 	#portfolio .clients img {
 		border-radius: 15px;
